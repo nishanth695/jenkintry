@@ -7,7 +7,7 @@ import logging
 from random import randint
 
 from selenium.common.exceptions import NoSuchElementException
-driver = webdriver.Chrome(executable_path='./drivers/chromedriver')
+driver = webdriver.Chrome(executable_path='./chromedriver')
 
 driver.get("http://127.0.0.1:8000/login")
 driver.maximize_window()
