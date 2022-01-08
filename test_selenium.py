@@ -9,7 +9,7 @@ from random import randint
 from selenium.common.exceptions import NoSuchElementException
 driver = webdriver.Chrome(executable_path='./chromedriver')
 
-driver.get("http://127.0.0.1:8000/login")
+driver.get("https://athena-ci.herokuapp.com/login")
 driver.maximize_window()
 username = driver.find_element_by_name("emailid")
 text = "vinay.gat1@gmail.com"
