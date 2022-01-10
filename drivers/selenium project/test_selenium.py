@@ -23,13 +23,23 @@ for character in text:
     password.send_keys(character)
     time.sleep(0.3)
 
-
-
 submit = driver.find_element_by_class_name('btn')
 submit.click()
 
 alert_obj = driver.switch_to.alert
 alert_obj.accept()
+
+if driver.title=="Notes Sharing Site":
+        print("------------------------------------------------------TEST PASSED--------------------------------------------------------------------")
+            
+else:    
+        print("Test failed")
+
+
+time.sleep(3)    
+driver.close()
+        
+
 
 
 
