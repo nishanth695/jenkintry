@@ -44,6 +44,7 @@ urlpatterns = [
     path('all_notes', all_notes, name='all_notes'),
     path('assign_status/<int:pid>', assign_status, name='assign_status'),
     path('delete_notes/<int:pid>', delete_notes, name='delete_notes'),
+    path('delete_queries/<int:pid>', delete_queries, name='delete_queries'),
     path('viewallnotes', viewallnotes, name='viewallnotes'),
     path('change_passwordadmin', change_passwordadmin, name='change_passwordadmin'),
     path('unread_queries', unread_queries, name='unread_queries'),

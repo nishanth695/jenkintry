@@ -47,7 +47,9 @@
                                         <td class="font-w600">{{i.fullname}}</td>
                                         <td class="font-w600">{{i.email}}</td>
                                         <td class="font-w600">{{i.mobile}}</td>
-                                        <td class="font-w600"><a href="{% url 'view_queries' i.id %}" class="text-primary">View Details</a></td>
+                                        <td class="font-w600"><a href="{% url 'view_queries' i.id %}" class="text-primary">View Details</a> | 
+                                        <a href="{% url 'delete_queries' i.id %}" class="text-danger" onclick="return confirm('Are your sure to Delete ?')">Delete</a>    
+                                        </td>
                                     </tr>
                                         {% endfor %}
                                 </tbody>

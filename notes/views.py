@@ -251,6 +251,13 @@ def delete_notes(request,pid):
     notes.delete()
     return  redirect('all_notes')
 
+def delete_queries(request,pid):
+    if not request.user.is_authenticated:
+        return redirect('login')
+    contact = Contact.objects.get(id=pid)
+    contact.delete()
+    return redirect('read_queries')
+
 def viewallnotes(request):
     if not request.user.is_authenticated:
         return redirect('login')
